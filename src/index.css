@@ -1,0 +1,1990 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
+
+/* =========================================
+   PREMIUM VEHICLE RENTAL HOMEPAGE
+========================================= */
+
+.home {
+  --dark: #0b1120;
+  --navy: #111c35;
+  --cyan: #22d3ee;
+  --purple: #8b5cf6;
+  --white: #ffffff;
+  --muted: #aab8ce;
+
+  font-family: 'Outfit', sans-serif;
+  color: var(--white);
+  background: var(--dark);
+  padding: 30px;
+  overflow: hidden;
+}
+
+.home * {
+  box-sizing: border-box;
+}
+
+.home h1,
+.home h2,
+.home h3,
+.home h4,
+.home p {
+  margin-top: 0;
+}
+
+.home h1,
+.home h2,
+.home h3,
+.home h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.home a {
+  text-decoration: none;
+}
+
+/* =========================================
+   SECTION 1: HERO
+========================================= */
+
+.home .hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+
+  min-height: 610px;
+  padding: 65px 7%;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      #3730a344,
+      transparent 35%
+    ),
+    linear-gradient(
+      125deg,
+      #111c35,
+      #0b1120 75%
+    );
+
+  border: 1px solid #263653;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.home .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.home .hero-tag {
+  display: inline-block;
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 22px;
+}
+
+.home .hero h1 {
+  color: #ffffff;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 800;
+  line-height: 1.17;
+  letter-spacing: -2px;
+  margin-bottom: 25px;
+}
+
+.home .hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #22d3ee,
+    #a78bfa,
+    #c4b5fd
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.home .hero-description {
+  color: #b8c5d9;
+  font-size: 17px;
+  line-height: 1.9;
+  max-width: 480px;
+  margin-bottom: 30px;
+}
+
+/* HERO BUTTONS */
+
+.home .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 45px;
+}
+
+.home .home-btn,
+.home .secondary-btn,
+.home .cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  padding: 15px 25px;
+  border-radius: 12px;
+
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.home .home-btn {
+  color: #07111e;
+  background: linear-gradient(
+    110deg,
+    #22d3ee,
+    #67e8f9
+  );
+  box-shadow: 0 8px 25px #22d3ee25;
+}
+
+.home .home-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px #22d3ee55;
+}
+
+.home .secondary-btn {
+  color: #ffffff;
+  background: #ffffff0a;
+  border: 1px solid #64748b80;
+}
+
+.home .secondary-btn:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: #22d3ee0d;
+}
+
+/* HERO STATS */
+
+.home .hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.home .stat h3 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.home .stat h3 span {
+  color: var(--cyan);
+}
+
+.home .stat p {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.home .stat-divider {
+  width: 1px;
+  height: 45px;
+  background: #475569;
+}
+
+/* HERO IMAGE */
+
+.home .hero-visual {
+  position: relative;
+  min-width: 0;
+  isolation: isolate;
+}
+
+.home .hero-glow {
+  position: absolute;
+  z-index: -1;
+  inset: 10% -5%;
+  background: #6d28d9;
+  filter: blur(100px);
+  opacity: 0.3;
+}
+
+.home .hero-visual > img {
+  display: block;
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 25px;
+  border: 1px solid #ffffff30;
+  box-shadow: 0 25px 60px #00000050;
+}
+
+.home .hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    #070b16a8
+  );
+  pointer-events: none;
+}
+
+.home .floating-card {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 18px;
+  border-radius: 17px;
+
+  background: #101827eF;
+  border: 1px solid #ffffff30;
+  backdrop-filter: blur(15px);
+}
+
+.home .floating-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+
+  background: #22d3ee18;
+  border: 1px solid #22d3ee50;
+  border-radius: 13px;
+  font-size: 25px;
+}
+
+.home .floating-card h4 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.home .floating-card p {
+  color: #aab8ce;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.home .floating-arrow {
+  margin-left: auto;
+  color: var(--cyan);
+  font-size: 24px;
+}
+
+.home .hero-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 11px 15px;
+  border-radius: 30px;
+
+  background: #0b1120dd;
+  border: 1px solid #ffffff25;
+
+  color: #e2e8f0;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.home .pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22d3ee;
+  box-shadow: 0 0 12px #22d3ee;
+}
+
+/* =========================================
+   SECTION 2: EXPLORE VEHICLES
+========================================= */
+
+.home .explore-section {
+  padding: 100px 5% 90px;
+  background: transparent;
+}
+
+.home .section-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.home .section-tag {
+  display: inline-block;
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 15px;
+}
+
+.home .section-top h2 {
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.home .section-top h2 span {
+  color: var(--cyan);
+}
+
+.home .section-top p {
+  color: #aab8ce;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.home .view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+
+  padding: 14px 20px;
+  border: 1px solid #475569;
+  border-radius: 12px;
+
+  color: #ffffff;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.home .view-all-btn span {
+  color: var(--cyan);
+  font-size: 20px;
+}
+
+.home .view-all-btn:hover {
+  background: #22d3ee12;
+  border-color: var(--cyan);
+}
+
+/* VEHICLE GRID */
+
+.home .vehicle-types {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.home .type-card {
+  min-width: 0;
+  overflow: hidden;
+
+  background: #111c35;
+  border: 1px solid #293751;
+  border-radius: 22px;
+
+  transition: all 0.35s ease;
+}
+
+.home .type-card:hover {
+  transform: translateY(-9px);
+  border-color: #22d3ee80;
+  box-shadow: 0 20px 45px #00000035;
+}
+
+/* IMAGE */
+
+.home .type-image {
+  position: relative;
+  overflow: hidden;
+  height: 245px;
+}
+
+.home .type-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.home .type-card:hover .type-image img {
+  transform: scale(1.08);
+}
+
+.home .type-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    #00000050,
+    transparent 45%,
+    #00000080
+  );
+}
+
+.home .type-number {
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 15px;
+
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+
+  padding: 8px 12px;
+  background: #0b1120cc;
+  border: 1px solid #ffffff30;
+  border-radius: 8px;
+}
+
+.home .type-label {
+  position: absolute;
+  z-index: 1;
+  bottom: 15px;
+  left: 15px;
+
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* CARD CONTENT */
+
+.home .type-content {
+  padding: 25px;
+}
+
+.home .type-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.home .type-title h3 {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.home .type-title p {
+  color: #aab8ce;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.home .type-emoji {
+  font-size: 26px;
+}
+
+.home .card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 17px;
+  border-top: 1px solid #334155;
+
+  color: var(--cyan);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.home .card-link span {
+  font-size: 22px;
+  transition: transform 0.3s;
+}
+
+.home .card-link:hover span {
+  transform: translateX(6px);
+}
+
+/* =========================================
+   SECTION 3: WHY CHOOSE US
+========================================= */
+
+.home .why-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 55px;
+
+  padding: 75px 7%;
+  border: 1px solid #334155;
+  border-radius: 28px;
+
+  background:
+    radial-gradient(
+      circle at 0% 100%,
+      #6d28d933,
+      transparent 40%
+    ),
+    linear-gradient(
+      130deg,
+      #111c35,
+      #15122e
+    );
+}
+
+.home .why-left h2 {
+  color: #ffffff;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 22px;
+}
+
+.home .why-left h2 span {
+  color: var(--cyan);
+}
+
+.home .why-left > p {
+  max-width: 440px;
+  color: #aab8ce;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+.home .why-decoration {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 40px;
+
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.home .decoration-dot {
+  color: var(--cyan);
+}
+
+/* FEATURE GRID */
+
+.home .features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.home .feature-card {
+  padding: 25px;
+
+  background: #ffffff08;
+  border: 1px solid #ffffff18;
+  border-radius: 18px;
+
+  transition: all 0.3s ease;
+}
+
+.home .feature-card:hover {
+  background: #22d3ee0c;
+  border-color: #22d3ee80;
+  transform: translateY(-5px);
+}
+
+.home .feature-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.home .feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  font-size: 25px;
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #0891b233,
+    #8b5cf633
+  );
+
+  border: 1px solid #8b5cf655;
+}
+
+.home .feature-number {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.home .feature-card h3 {
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.home .feature-card p {
+  color: #aab8ce;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* =========================================
+   BOTTOM CALL TO ACTION
+========================================= */
+
+.home .bottom-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  padding: 40px 5%;
+  margin-top: 60px;
+  margin-bottom: 20px;
+
+  background: linear-gradient(
+    110deg,
+    #164e63,
+    #312e81,
+    #4c1d95
+  );
+
+  border: 1px solid #8b5cf655;
+  border-radius: 22px;
+}
+
+.home .bottom-cta > div > span {
+  display: inline-block;
+  color: #a5f3fc;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.home .bottom-cta h2 {
+  color: #ffffff;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.home .cta-button {
+  flex-shrink: 0;
+  color: #101827;
+  background: #ffffff;
+}
+
+.home .cta-button:hover {
+  background: #cffafe;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1100px) {
+  .home {
+    padding: 20px;
+  }
+
+  .home .hero {
+    padding: 50px 5%;
+    gap: 30px;
+  }
+
+  .home .hero-visual > img {
+    height: 380px;
+  }
+
+  .home .why-section {
+    gap: 30px;
+    padding: 50px 5%;
+  }
+
+  .home .vehicle-types {
+    gap: 18px;
+  }
+
+  .home .type-image {
+    height: 210px;
+  }
+
+  .home .type-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .home .hero {
+    grid-template-columns: 1fr;
+    padding: 45px;
+  }
+
+  .home .hero-content {
+    max-width: 650px;
+  }
+
+  .home .hero-visual {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .home .hero-visual > img {
+    height: 400px;
+  }
+
+  .home .vehicle-types {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home .why-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    padding: 12px;
+  }
+
+  .home .hero {
+    padding: 35px 22px;
+    border-radius: 22px;
+  }
+
+  .home .hero h1 {
+    font-size: 39px;
+    letter-spacing: -1px;
+  }
+
+  .home .hero-description {
+    font-size: 15px;
+  }
+
+  .home .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home .hero-buttons a {
+    width: 100%;
+  }
+
+  .home .hero-stats {
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .home .stat h3 {
+    font-size: 22px;
+  }
+
+  .home .stat p {
+    font-size: 11px;
+  }
+
+  .home .hero-visual > img {
+    height: 300px;
+  }
+
+  .home .floating-card {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 12px;
+  }
+
+  .home .explore-section {
+    padding: 65px 8px;
+  }
+
+  .home .section-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .home .section-top h2 {
+    font-size: 32px;
+  }
+
+  .home .vehicle-types {
+    grid-template-columns: 1fr;
+  }
+
+  .home .type-image {
+    height: 240px;
+  }
+
+  .home .why-section {
+    padding: 40px 22px;
+  }
+
+  .home .features {
+    grid-template-columns: 1fr;
+  }
+
+  .home .bottom-cta {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px 22px;
+  }
+
+  .home .cta-button {
+    width: 100%;
+  }
+}
+/* =========================
+   1. GLOBAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #dbeafe 0%,
+    #e0e7ff 45%,
+    #f5e9ff 100%
+  );
+
+  background-attachment: fixed;
+  color: #1e293b;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* =========================
+   2. NAVBAR
+========================= */
+
+nav {
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e3a8a
+  );
+
+  padding: 20px 5%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.2);
+}
+
+nav a {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #67e8f9;
+}
+
+/* =========================
+   3. MAIN CONTENT
+========================= */
+
+main {
+  width: 92%;
+  max-width: 1400px;
+  margin: 35px auto;
+}
+
+h1 {
+  color: #172554;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   4. HOME PAGE
+========================= */
+
+.home {
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e3a8a,
+    #06b6d4
+  );
+
+  color: white;
+  text-align: center;
+
+  padding: 70px 30px;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
+}
+
+.home h1 {
+  color: white;
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.home p {
+  color: #dbeafe;
+  font-size: 18px;
+}
+
+/* =========================
+   5. ADD VEHICLE BUTTON
+========================= */
+
+/* =========================
+   ADD VEHICLE BUTTON
+========================= */
+
+/* =========================
+   ADD VEHICLE BUTTON
+========================= */
+
+/* =========================================
+   VEHICLES HEADER
+========================================= */
+
+.vehicles-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.vehicles-header h1 {
+  margin: 0;
+  color: #172554;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   ADD VEHICLE BUTTON
+========================================= */
+
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 13px 24px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4
+  );
+
+  color: #ffffff;
+
+  border: none;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 15px rgba(37, 99, 235, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* =========================================
+   ADD VEHICLE BUTTON HOVER
+========================================= */
+
+.add-btn:hover {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #1d4ed8,
+    #0891b2
+  );
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+
+/* =========================================
+   ADD VEHICLE BUTTON ACTIVE
+========================================= */
+
+.add-btn:active {
+  transform: translateY(0);
+
+  box-shadow:
+    0 4px 10px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .vehicles-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .vehicles-header h1 {
+    font-size: 27px;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+}
+/* =========================
+   6. VEHICLE GRID
+   3 CARDS PER ROW
+========================= */
+
+.vehicles,
+.destinations {
+  display: grid;
+
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 1fr)
+  );
+
+  gap: 30px;
+  align-items: stretch;
+  margin-top: 25px;
+}
+
+/* =========================
+   7. VEHICLE CARD
+========================= */
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(37, 99, 235, 0.16);
+}
+
+/* Vehicle Image */
+
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.04);
+}
+
+/* Vehicle Name */
+
+.card h3 {
+  padding: 20px 20px 10px;
+
+  color: #0f172a;
+  font-size: 22px;
+  line-height: 1.4;
+
+  min-height: 80px;
+  overflow-wrap: anywhere;
+}
+
+/* Vehicle Information */
+
+.card p {
+  padding: 4px 20px;
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* Vehicle Price */
+
+.card .price {
+  color: #2563eb;
+  font-size: 25px;
+  font-weight: 800;
+
+  padding: 20px;
+  margin-top: auto;
+}
+
+.card .price span {
+  font-size: 15px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* =========================
+   8. CARD ACTION BUTTONS
+========================= */
+
+.card-actions {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+
+  padding: 0 20px 20px;
+  margin-top: 0;
+}
+
+/* Common Button Styles */
+
+.card .card-actions a,
+.card .card-actions button {
+  flex: 1;
+  min-width: 0;
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 10px 6px;
+
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* View Button */
+
+.card .card-actions .view-btn {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4
+  );
+}
+
+/* Edit Button */
+
+.card .card-actions .edit-btn {
+  background: linear-gradient(
+    135deg,
+    #16a34a,
+    #22c55e
+  );
+}
+
+/* Delete Button */
+
+.card .card-actions .delete-btn {
+  background: linear-gradient(
+    135deg,
+    #dc2626,
+    #ef4444
+  );
+}
+
+/* Button Hover */
+
+.card .card-actions a:hover,
+.card .card-actions button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 16px rgba(15, 23, 42, 0.2);
+}
+
+/* Button Focus */
+
+.card .card-actions a:focus-visible,
+.card .card-actions button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+/* =========================
+   9. VEHICLE DETAILS
+========================= */
+
+.details {
+  background: #ffffff;
+  padding: 35px;
+
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.details > img {
+  width: 100%;
+  height: 450px;
+
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+.details h1 {
+  color: #172554;
+  margin-bottom: 15px;
+}
+
+.details h3 {
+  color: #2563eb;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.details p {
+  color: #475569;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  line-height: 1.8;
+}
+
+.details ul {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+.details li {
+  margin-bottom: 8px;
+  color: #475569;
+}
+
+/* =========================
+   10. VEHICLE FEATURES
+========================= */
+
+.vehicle-features {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.vehicle-features h2 {
+  color: #0f172a;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.features-grid {
+  display: grid;
+
+  grid-template-columns: repeat(
+    2,
+    minmax(0, 1fr)
+  );
+
+  gap: 15px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px;
+
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.feature-item:hover {
+  background: #e0f2fe;
+  border-color: #2563eb;
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 30px;
+  height: 30px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4
+  );
+
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* =========================
+   11. GENERAL BUTTON
+========================= */
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4
+  );
+
+  color: white;
+  border: none;
+  border-radius: 10px;
+
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* =========================
+   12. FORM
+========================= */
+
+.form-container {
+  max-width: 700px;
+  width: 100%;
+
+  margin: 35px auto;
+  padding: 35px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #172554;
+  margin-bottom: 25px;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.form-container textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-container input:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Submit Button */
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4
+  );
+
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* =========================
+   13. TABLET DESIGN
+   2 CARDS PER ROW
+========================= */
+
+@media (max-width: 1000px) {
+  .vehicles,
+  .destinations {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+    gap: 22px;
+  }
+
+  main {
+    width: 94%;
+  }
+
+  .card img {
+    height: 220px;
+  }
+}
+
+/* =========================
+   14. MOBILE DESIGN
+   1 CARD PER ROW
+========================= */
+
+@media (max-width: 600px) {
+  nav {
+    padding: 16px 5%;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  main {
+    width: 92%;
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .home {
+    padding: 45px 20px;
+  }
+
+  .home h1 {
+    font-size: 28px;
+  }
+
+  .vehicles,
+  .destinations {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .card img {
+    height: 230px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+    min-height: auto;
+  }
+
+  .card-actions {
+    padding: 0 15px 15px;
+    gap: 8px;
+  }
+
+  .card .card-actions a,
+  .card .card-actions button {
+    font-size: 14px;
+    padding: 10px 6px;
+  }
+
+  .details {
+    padding: 20px;
+  }
+
+  .details > img {
+    height: 250px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container {
+    padding: 22px;
+  }
+}
+
+
+/* AUTH PAGES */
+
+.auth-container {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  background: #f1f5f9;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.auth-card h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0f172a;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+/* INPUT FIELDS */
+
+.auth-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.auth-card input:focus {
+  border-color: #06b6d4;
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.15);
+}
+
+/* BUTTON */
+
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4
+  );
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* LINKS */
+
+.auth-card p {
+  text-align: center;
+  margin-top: 15px;
+  color: #64748b;
+}
+
+.auth-card p a {
+  color: #2563eb;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.auth-card p a:hover {
+  color: #0891b2;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 28px 22px;
+  }
+
+  .auth-card h1 {
+    font-size: 25px;
+  }
+}
+
+
+
+/* ==============================
+   FAVORITES PAGE
+============================== */
+
+.favorites-container {
+  width: 100%;
+  min-height: 80vh;
+  padding: 40px;
+  background: linear-gradient(135deg, #e0eaff, #f3e8ff);
+  box-sizing: border-box;
+}
+
+/* Page Heading */
+.page-title {
+  text-align: center;
+  margin: 0 0 35px;
+  color: #1e293b;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+/* ==============================
+   FAVORITES GRID
+============================== */
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 320px), 1fr)
+  );
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* ==============================
+   FAVORITE CARD
+============================== */
+
+.favorite-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(31, 41, 55, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(31, 41, 55, 0.18);
+}
+
+/* Vehicle Image */
+.favorite-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ==============================
+   CARD CONTENT
+============================== */
+
+.favorite-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 24px;
+  gap: 12px;
+}
+
+.favorite-content h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.favorite-content p {
+  margin: 0;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Price */
+.favorite-price {
+  margin-top: auto !important;
+  padding-top: 12px;
+  color: #2563eb !important;
+  font-size: 1.8rem !important;
+  font-weight: 800;
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+
+/* Add to Favorites */
+.favorite-btn {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 9px;
+  background: #ff6b35;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.favorite-btn:hover {
+  background: #e85d2a;
+  transform: translateY(-2px);
+}
+
+/* Remove from Favorites */
+.remove-favorite-btn {
+  width: 100%;
+  padding: 13px 16px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 9px;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.remove-favorite-btn:hover {
+  background: #b91c1c;
+}
+
+/* View Details */
+.view-details-btn {
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+}
+
+.view-details-btn:hover {
+  opacity: 0.9;
+}
+
+/* ==============================
+   EMPTY FAVORITES
+============================== */
+
+.empty-favorites {
+  padding: 70px 20px;
+  text-align: center;
+  color: #64748b;
+}
+
+.empty-favorites h2 {
+  margin-bottom: 12px;
+  color: #1e293b;
+  font-size: 1.8rem;
+}
+
+.empty-favorites p {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 768px) {
+  .favorites-container {
+    padding: 25px 18px;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+.favorites-grid {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+  .favorite-card img {
+    height: 220px;
+  }
+
+  .favorite-content {
+    padding: 20px;
+  }
+
+  .favorite-content h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-container {
+    padding: 20px 12px;
+  }
+
+  .favorites-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .favorite-card img {
+    height: 200px;
+  }
+
+  .favorite-content {
+    padding: 18px;
+  }
+
+  .favorite-price {
+    font-size: 1.5rem !important;
+  }
+}
