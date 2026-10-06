@@ -1,10 +1,10 @@
-
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../services/api";
 
 function VehicleDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [vehicle, setVehicle] = useState(null);
   const [error, setError] = useState("");
@@ -33,9 +33,11 @@ function VehicleDetails() {
 
   return (
     <div className="details">
+
       <img src={vehicle.image} alt={vehicle.name} />
 
       <h1>{vehicle.name}</h1>
+
       <p>{vehicle.description}</p>
 
       <h3>Category</h3>
@@ -64,6 +66,21 @@ function VehicleDetails() {
 
       <h3>Location</h3>
       <p>{vehicle.location}</p>
+
+      {/* BOOK NOW BUTTON */}
+      <button
+        className="book-now-btn"
+        onClick={() =>
+          navigate("/booking", {
+            state: {
+              vehicle: vehicle
+            }
+          })
+        }
+      >
+        🚗 Book Now
+      </button>
+
     </div>
   );
 }

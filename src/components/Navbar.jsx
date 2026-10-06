@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -14,19 +13,31 @@ function Navbar() {
 
   // Get favorites from Redux
   const favorites = useSelector(
-    (state) => state.favorites.favorites || []
+    (state) => state.favorites?.favorites || []
   );
 
   return (
     <nav className="navbar">
+
+      {/* Home */}
       <Link to="/">Home</Link>
 
+      {/* Vehicles */}
       <Link to="/vehicles">Vehicles</Link>
 
+      {/* Favorites */}
       <Link to="/favorites">
-        Favorites ({favorites.length})
+        ❤️ Favorites ({favorites.length})
       </Link>
 
+      {/* My Bookings */}
+      {user && (
+        <Link to="/my-bookings">
+          📋 My Bookings
+        </Link>
+      )}
+
+      {/* Authentication */}
       {!user && (
         <>
           <Link to="/register">Register</Link>
@@ -35,9 +46,10 @@ function Navbar() {
       )}
 
       {user && (
-        <Link to="/logout">Logout</Link>
+        <Link to="/logout">
+          Logout
+        </Link>
       )}
-
 
     </nav>
   );
